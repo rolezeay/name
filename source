@@ -1,7 +1,10 @@
+--Main
+
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Script Hub By ether#9999", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+--Tab 1
 
 local Tab = Window:MakeTab({
 	Name = "Scripts",
@@ -10,7 +13,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Classics"
+	Name = "Admin Scripts"
 })
 
 Tab:AddButton({
@@ -20,12 +23,10 @@ Tab:AddButton({
   	end    
 })
 
-
-
 Tab:AddButton({
-	Name = "MeepCracked",
+	Name = "Infinite Yield",
 	Callback = function()
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/synolope/meepcracked/main/loader.lua'))()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
   	end    
 })
 
@@ -36,6 +37,16 @@ Tab:AddButton({
   	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Game Scripts"
+})
+
+Tab:AddButton({
+	Name = "MeepCracked",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/synolope/meepcracked/main/loader.lua'))()
+  	end    
+})
 
 Tab:AddButton({
 	Name = "Breaking Point AutoFarm",
@@ -46,39 +57,348 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/2vsh/breakingpoint/ma
   	end    
 })
 
-
 Tab:AddButton({
-	Name = "Monday Morning Misery",
-	Callback = function()
-        loadstring(game:HttpGet("https://stavratum.github.io/" .. game.PlaceId))()
-  	end    
-})
-
-
-Tab:AddButton({
-	Name = "Breaking Point Silent Aim And More",
+	Name = "Breaking Point Silent Aim and More",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/1iseo/breaking-point-public/main/main.lua"))()
   	end    
 })
 
+Tab:AddButton({
+	Name = "Monday Morning Misery AutoPlay",
+	Callback = function()
+        loadstring(game:HttpGet("https://stavratum.github.io/" .. game.PlaceId))()
+  	end    
+})
+
+--Tab 2
 
 local Tab = Window:MakeTab({
-	Name = "Tab 2",
+	Name = "Player",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
+local Section = Tab:AddSection({
+	Name = "WalkSpeed"
+})
 
-Tab:AddSlider({
-	Name = "Walkspeed",
-	Min = 2,
-	Max = 500,
-	Default = 5,
-	Color = Color3.fromRGB(255,255,255),
-	Increment = 1,
-	ValueName = "Walkspeed",
-	Callback = function(Value)
-		game.Players.LocalPlayer.Character.Humanoid.Walspeed = Value
-	end    
+Tab:AddButton({
+	Name = "Normal Walkspeed (16)",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Walkspeed 25",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 25
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Walkspeed 50",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 50
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Walkspeed 100",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Walkspeed 150",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 150
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Walkspeed 200",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 200
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "JumpPower"
+})
+
+Tab:AddButton({
+	Name = "Normal Jumppower (50)",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+  	end    
+})
+
+Tab:AddButton({
+	Name = "JumpPower 100",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+  	end    
+})
+
+Tab:AddButton({
+	Name = "JumpPower 150",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "JumpPower 200",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+  	end    
+})
+
+Tab:AddButton({
+	Name = "JumpPower 250",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 250
+  	end    
+})
+
+Tab:AddButton({
+	Name = "JumpPower 300",
+	Callback = function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 300
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "Noclip"
+})
+
+Tab:AddButton({
+	Name = "Toggle Noclip",
+	Callback = function()
+        local Workspace = game:GetService("Workspace")
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local Noclip = Instance.new("ScreenGui")
+local BG = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local StatusPF = Instance.new("TextLabel")
+local Status = Instance.new("TextLabel")
+local Credit = Instance.new("TextLabel")
+local Plr = Players.LocalPlayer
+local Clipon = false
+
+Noclip.Name = "Noclip"
+Noclip.Parent = game.CoreGui
+
+BG.Name = "BG"
+BG.Parent = Noclip
+BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+BG.BorderSizePixel = 2
+BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0)
+BG.Size = UDim2.new(0, 210, 0, 127)
+BG.Active = true
+BG.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = BG
+Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+Title.BorderSizePixel = 2
+Title.Size = UDim2.new(0, 210, 0, 33)
+Title.Font = Enum.Font.Highway
+Title.Text = "Noclip"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.FontSize = Enum.FontSize.Size32
+Title.TextSize = 30
+Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Title.TextStrokeTransparency = 0
+
+Toggle.Parent = BG
+Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+Toggle.BorderSizePixel = 2
+Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
+Toggle.Size = UDim2.new(0, 146, 0, 36)
+Toggle.Font = Enum.Font.Highway
+Toggle.FontSize = Enum.FontSize.Size28
+Toggle.Text = "Toggle"
+Toggle.TextColor3 = Color3.new(1, 1, 1)
+Toggle.TextSize = 25
+Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Toggle.TextStrokeTransparency = 0
+
+StatusPF.Name = "StatusPF"
+StatusPF.Parent = BG
+StatusPF.BackgroundColor3 = Color3.new(1, 1, 1)
+StatusPF.BackgroundTransparency = 1
+StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0)
+StatusPF.Size = UDim2.new(0, 56, 0, 20)
+StatusPF.Font = Enum.Font.Highway
+StatusPF.FontSize = Enum.FontSize.Size24
+StatusPF.Text = "Status:"
+StatusPF.TextColor3 = Color3.new(1, 1, 1)
+StatusPF.TextSize = 20
+StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333)
+StatusPF.TextStrokeTransparency = 0
+StatusPF.TextWrapped = true
+
+Status.Name = "Status"
+Status.Parent = BG
+Status.BackgroundColor3 = Color3.new(1, 1, 1)
+Status.BackgroundTransparency = 1
+Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0)
+Status.Size = UDim2.new(0, 56, 0, 20)
+Status.Font = Enum.Font.Highway
+Status.FontSize = Enum.FontSize.Size14
+Status.Text = "off"
+Status.TextColor3 = Color3.new(0.666667, 0, 0)
+Status.TextScaled = true
+Status.TextSize = 14
+Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Status.TextWrapped = true
+Status.TextXAlignment = Enum.TextXAlignment.Left
+
+Credit.Name = "Credit"
+Credit.Parent = BG
+Credit.BackgroundColor3 = Color3.new(1, 1, 1)
+Credit.BackgroundTransparency = 1
+Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
+Credit.Size = UDim2.new(0, 128, 0, 17)
+Credit.Font = Enum.Font.SourceSans
+Credit.FontSize = Enum.FontSize.Size18
+Credit.Text = "Created by KingLuna"
+Credit.TextColor3 = Color3.new(1, 1, 1)
+Credit.TextSize = 16
+Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Credit.TextStrokeTransparency = 0
+Credit.TextWrapped = true
+
+Toggle.MouseButton1Click:connect(function()
+ if Status.Text == "off" then
+  Clipon = true
+  Status.Text = "on"
+  Status.TextColor3 = Color3.new(0,185,0)
+  Stepped = game:GetService("RunService").Stepped:Connect(function()
+   if not Clipon == false then
+    for a, b in pairs(Workspace:GetChildren()) do
+                if b.Name == Plr.Name then
+                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                end end end end
+   else
+    Stepped:Disconnect()
+   end
+  end)
+ elseif Status.Text == "on" then
+  Clipon = false
+  Status.Text = "off"
+  Status.TextColor3 = Color3.new(170,0,0)
+ end
+end)
+  	end    
+})
+
+--Tab 3
+
+local Tab = Window:MakeTab({
+	Name = "Others",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Rejoin And Small Server"
+})
+
+Tab:AddButton({
+	Name = "Rejoin",
+	Callback = function()
+        local ts = game:GetService("TeleportService")
+
+local p = game:GetService("Players").LocalPlayer
+
+ 
+
+ts:Teleport(game.PlaceId, p)
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Find Small Server",
+	Callback = function()
+        Time = 1 -- seconds
+repeat wait() until game:IsLoaded()
+wait(Time)
+local PlaceID = game.PlaceId
+local AllIDs = {}
+local foundAnything = ""
+local actualHour = os.date("!*t").hour
+local Deleted = false
+function TPReturner()
+   local Site;
+   if foundAnything == "" then
+       Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+   else
+       Site = game.HttpService:JSONDecode(game:HttpGet('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+   end
+   local ID = ""
+   if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+       foundAnything = Site.nextPageCursor
+   end
+   local num = 0;
+   for i,v in pairs(Site.data) do
+       local Possible = true
+       ID = tostring(v.id)
+       if tonumber(v.maxPlayers) > tonumber(v.playing) then
+           for _,Existing in pairs(AllIDs) do
+               if num ~= 0 then
+                   if ID == tostring(Existing) then
+                       Possible = false
+                   end
+               else
+                   if tonumber(actualHour) ~= tonumber(Existing) then
+                       local delFile = pcall(function()
+                           delfile("NotSameServers.json")
+                           AllIDs = {}
+                           table.insert(AllIDs, actualHour)
+                       end)
+                   end
+               end
+               num = num + 1
+           end
+           if Possible == true then
+               table.insert(AllIDs, ID)
+               wait()
+               pcall(function()
+                   writefile("NotSameServers.json", game:GetService('HttpService'):JSONEncode(AllIDs))
+                   wait()
+                   game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+               end)
+               wait(4)
+           end
+       end
+   end
+end
+ 
+function Teleport()
+   while wait() do
+       pcall(function()
+           TPReturner()
+           if foundAnything ~= "" then
+               TPReturner()
+           end
+       end)
+   end
+end
+ 
+-- If you'd like to use a script before server hopping (Like a Automatic Chest collector you can put the Teleport() after it collected everything.
+Teleport()
+  	end    
 })
