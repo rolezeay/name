@@ -1,0 +1,84 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+
+local Tab = Window:MakeTab({
+	Name = "Scripts",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Classics"
+})
+
+Tab:AddButton({
+	Name = "Fates Admin",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+  	end    
+})
+
+
+
+Tab:AddButton({
+	Name = "MeepCracked",
+	Callback = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/synolope/meepcracked/main/loader.lua'))()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Orca Admin",
+	Callback = function()
+        loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/latest.lua"))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Breaking Point AutoFarm",
+	Callback = function()
+        getgenv().AutoFarm = true --enables / disables AutoFarm
+getgenv().ServerHop = false --enables / disables server hop, add to autoexec if you enable this.
+loadstring(game:HttpGet('https://raw.githubusercontent.com/2vsh/breakingpoint/main/mainscript.lua'))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Monday Morning Misery",
+	Callback = function()
+        loadstring(game:HttpGet("https://stavratum.github.io/" .. game.PlaceId))()
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "Breaking Point Silent Aim And More",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/1iseo/breaking-point-public/main/main.lua"))()
+  	end    
+})
+
+
+local Tab = Window:MakeTab({
+	Name = "Tab 2",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 2,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Walkspeed",
+	Callback = function(Value)
+		game.Players.LocalPlayer.Character.Humanoid.Walspeed = Value
+	end    
+})
