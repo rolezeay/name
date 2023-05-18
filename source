@@ -65,6 +65,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+	Name = "Owl Hub",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+  	end    
+})
+
+Tab:AddButton({
 	Name = "Monday Morning Misery AutoPlay",
 	Callback = function()
         loadstring(game:HttpGet("https://stavratum.github.io/" .. game.PlaceId))()
