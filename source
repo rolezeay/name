@@ -37,6 +37,14 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Nameless admin",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))();
+  	end    
+})
+
+
 local Section = Tab:AddSection({
 	Name = "🎮Game Scripts"
 })
