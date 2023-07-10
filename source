@@ -2,18 +2,18 @@
 
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 
-local Window = OrionLib:MakeWindow({Name = "Script Hub By ether#9999", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "🤯66niko reborn", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 --Tab 1
 
 local Tab = Window:MakeTab({
-	Name = "Scripts",
+	Name = "📃Scripts",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 local Section = Tab:AddSection({
-	Name = "Admin Scripts"
+	Name = "📁Admin Scripts"
 })
 
 Tab:AddButton({
@@ -38,7 +38,7 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
-	Name = "Game Scripts"
+	Name = "🎮Game Scripts"
 })
 
 Tab:AddButton({
@@ -64,12 +64,6 @@ Tab:AddButton({
   	end    
 })
 
-Tab:AddButton({
-	Name = "Doors MSHUB",
-	Callback = function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
-  	end    
-})
 
 Tab:AddButton({
 	Name = "Owl Hub",
@@ -85,10 +79,24 @@ Tab:AddButton({
   	end    
 })
 
+Tab:AddButton({
+	Name = "Op script",
+	Callback = function()
+       loadstring(game:HttpGet("https://scriptblox.com/raw/Ragdoll-Engine-OP-script-11246"))()
+    end
+  })
+
+Tab:AddButton({
+	Name = "Free animations",
+	Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+  	end   
+  })
+
 --Tab 2
 
 local Tab = Window:MakeTab({
-	Name = "Player",
+	Name = "☕️Player",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -322,7 +330,7 @@ end)
 --Tab 3
 
 local Tab = Window:MakeTab({
-	Name = "Others",
+	Name = "🎗️Others",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
