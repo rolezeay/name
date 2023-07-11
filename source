@@ -46,7 +46,7 @@ Tab:AddButton({
 
 
 local Section = Tab:AddSection({
-	Name = "🎮Game Scripts"
+	Name = "🎮Local & Universal Scripts"
 })
 
 Tab:AddButton({
@@ -88,14 +88,14 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
-	Name = "Op script",
+	Name = "Op script <Universal>",
 	Callback = function()
        loadstring(game:HttpGet("https://scriptblox.com/raw/Ragdoll-Engine-OP-script-11246"))()
     end
   })
 
 Tab:AddButton({
-	Name = "Free animations",
+	Name = "Free animations <Universal>",
 	Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
   	end   
